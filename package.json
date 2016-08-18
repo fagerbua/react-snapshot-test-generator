@@ -1,0 +1,27 @@
+{
+  "name": "react-snapshot-test-generator",
+  "version": "1.0.0",
+  "description": "Automatically generate boilerplate for React component snapshot tests",
+  "main": "lib/test-generator.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src -d lib",
+    "test": "babel tests.js | node"
+  },
+  "keywords": [
+    "testing",
+    "react",
+    "react-native"
+  ],
+  "bin": {
+    "react-snapshot-test-generator": "lib/test-generator.js"
+  },
+  "author": "Jarle Fagerheim <jarle@fagerbua.no>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "should": "^11.1.0",
+    "yargs": "^5.0.0"
+  }
+}
