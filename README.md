@@ -1,4 +1,6 @@
 # react-snapshot-test-generator
+![Travis build status](https://travis-ci.org/fagerbua/react-snapshot-test-generator.svg?branch=master)
+
 Automatically generate boilerplate for React component snapshot tests
 
 ## Rationale
@@ -56,7 +58,10 @@ scripts: {
 ### Generating tests
 Simply running `npm run generateTests` will read the configuration from `snapshotTestConfig.js` and generate a test file in `__tests__/snapshotTests.js`.
 
-The test generation can be customized. Run `npm run generateTests -- -h` to get information about theavailable command line options. Note in particular the `-n` flag for generating React Native tests.
+The test generation can be customized. Run `npm run generateTests -- -h` to get information about the available command line options. Note in particular the `-n` flag for generating React Native tests.
+
+## Credits
+Development of this tool is supported by the University of Oslo.
 
 ## License
 
