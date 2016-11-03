@@ -40,11 +40,11 @@ f.parseDefinitions({
 
 f.flatten([["this", "that"], ["something", "else"]]).should.equal("this\nthat\nsomething\nelse")
 
-t.jestReactMock("Module").should.equal("jest.mock('Module', () => 'Module')")
+t.jestReactMock("Module").should.equal("jest.mock('Module', () => 'Module');")
 
-f.jestReactMocks(["Module1", "Module2"]).should.equal("jest.mock('Module1', () => 'Module1')\njest.mock('Module2', () => 'Module2')")
+f.jestReactMocks(["Module1", "Module2"]).should.equal("jest.mock('Module1', () => 'Module1');\njest.mock('Module2', () => 'Module2');")
 
-t.componentImport('here/there', 'TestComponent').should.equal("import TestComponent from '../here/there/TestComponent'")
+t.componentImport('here/there', 'TestComponent').should.equal("import TestComponent from '../here/there/TestComponent';")
 
 t.jsxProp('key', 'value').should.equal("key={value}")
 
@@ -59,15 +59,15 @@ t.jsxTag("Test", "").should.equal('<Test />')
 t.testDescription("TestComponent", "key={value} key2={anotherValue}").should.equal(`
 describe('<TestComponent key={value} key2={anotherValue} />', () => {
   it('renders correctly', () => {
-    snapshotTest(<TestComponent key={value} key2={anotherValue} />)
-  })
-})`)
+    snapshotTest(<TestComponent key={value} key2={anotherValue} />);
+  });
+});`)
 
 t.testDescription("TestComponent", "").should.equal(`
 describe('<TestComponent />', () => {
   it('renders correctly', () => {
-    snapshotTest(<TestComponent />)
-  })
-})`)
+    snapshotTest(<TestComponent />);
+  });
+});`)
 
 console.log("All tests passed!")
