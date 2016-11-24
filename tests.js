@@ -57,14 +57,14 @@ t.jsxTag("Test", "key={val}").should.equal('<Test key={val} />')
 t.jsxTag("Test", "").should.equal('<Test />')
 
 t.testDescription("TestComponent", "key={value} key2={anotherValue}").should.equal(`
-describe('<TestComponent key={value} key2={anotherValue} />', () => {
+describe(\`<TestComponent key={value} key2={anotherValue} />\`, () => {
   it('renders correctly', () => {
     snapshotTest(<TestComponent key={value} key2={anotherValue} />)
   })
 })`)
 
 t.testDescription("TestComponent", "").should.equal(`
-describe('<TestComponent />', () => {
+describe(\`<TestComponent />\`, () => {
   it('renders correctly', () => {
     snapshotTest(<TestComponent />)
   })
