@@ -60,12 +60,12 @@ const generatedMocks = autoMocks ? jestReactMocks(autoMocks) : ""
 
 const template = `${comment}
 ${reactNativeImport}
-import React from 'React'
-import renderer from 'react-test-renderer'
+import React from 'react';
+import renderer from 'react-test-renderer';
 
 function snapshotTest(element) {
-  const tree = renderer.create(element).toJSON()
-  expect(tree).toMatchSnapshot()
+  const tree = renderer.create(element).toJSON();
+  expect(tree).toMatchSnapshot();
 }
 
 ${generatedMocks}
