@@ -1,3 +1,9 @@
+NOTE: This project is not actively developed. I (@fagerbua) don't use
+it for my own projects anymore. It only encouraged me to make too many
+snapshot tests. Rather than use this tool, I'd recommend you give some
+careful thought to which snapshot tests would create the most value
+for your application, and code them by hand. Good luck!
+
 # react-snapshot-test-generator
 ![Travis build status](https://travis-ci.org/fagerbua/react-snapshot-test-generator.svg?branch=master)
 
